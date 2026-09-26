@@ -1,0 +1,111 @@
+:root {
+  --primary-color: #0066CC;
+  --secondary-color: #004080;
+  --font-family: 'Inter', sans-serif;
+  --font-size-base: 16px;
+  --spacing-unit: 8px;
+  --border-radius: 4px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-unit);
+}
+
+.hero {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 4 * var(--spacing-unit) 0;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-unit);
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2 * var(--spacing-unit);
+}
+
+.about, .skills, .projects, .contact {
+  padding: 4 * var(--spacing-unit) 0;
+}
+
+.about h2, .skills h2, .projects h2, .contact h2 {
+  font-size: 2rem;
+  margin-bottom: 2 * var(--spacing-unit);
+}
+
+.skills ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skills li {
+  background-color: #e0e0e0;
+  margin-bottom: var(--spacing-unit);
+  padding: var(--spacing-unit);
+  border-radius: var(--border-radius);
+}
+
+.projects .project {
+  background-color: #fff;
+  margin-bottom: var(--spacing-unit);
+  padding: var(--spacing-unit);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.projects .project h3 {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-unit);
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact input, .contact textarea {
+  margin-bottom: var(--spacing-unit);
+  padding: var(--spacing-unit);
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+}
+
+.contact button {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: var(--spacing-unit) 2 * var(--spacing-unit);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+.contact button:hover {
+  background-color: darken(var(--secondary-color), 10%);
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .about h2, .skills h2, .projects h2, .contact h2 {
+    font-size: 1.5rem;
+  }
+}
