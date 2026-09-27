@@ -9,141 +9,127 @@
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body class="bg-background text-text font-body">
-    <header class="bg-primary py-4">
+    <header class="bg-primary text-white py-4">
         <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-white font-heading text-2xl">Data Science Portfolio</h1>
+            <h1 class="text-2xl">Data Science Portfolio</h1>
             <nav class="hidden md:flex space-x-4">
-                <a href="#about" class="text-white hover:text-secondary">About</a>
-                <a href="#skills" class="text-white hover:text-secondary">Skills</a>
-                <a href="#projects" class="text-white hover:text-secondary">Projects</a>
-                <a href="#education" class="text-white hover:text-secondary">Education</a>
-                <a href="#contact" class="text-white hover:text-secondary">Contact</a>
+                <a href="#about" class="hover:text-secondary">About</a>
+                <a href="#skills" class="hover:text-secondary">Skills</a>
+                <a href="#projects" class="hover:text-secondary">Projects</a>
+                <a href="#education" class="hover:text-secondary">Education</a>
+                <a href="#contact" class="hover:text-secondary">Contact</a>
             </nav>
-            <button id="mobile-menu-toggle" class="md:hidden text-white">☰
+            <button id="mobile-menu-button" class="md:hidden">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
             </button>
         </div>
-        <div id="mobile-menu" class="md:hidden mt-2">
-            <a href="#about" class="block px-3 py-2 text-white hover:bg-secondary hover:text-background">About</a>
-            <a href="#skills" class="block px-3 py-2 text-white hover:bg-secondary hover:text-background">Skills</a>
-            <a href="#projects" class="block px-3 py-2 text-white hover:bg-secondary hover:text-background">Projects</a>
-            <a href="#education" class="block px-3 py-2 text-white hover:bg-secondary hover:text-background">Education</a>
-            <a href="#contact" class="block px-3 py-2 text-white hover:bg-secondary hover:text-background">Contact</a>
-        </div>
+        <nav id="mobile-menu" class="md:hidden mt-4">
+            <a href="#about" class="block px-4 py-2 hover:bg-secondary hover:text-white">About</a>
+            <a href="#skills" class="block px-4 py-2 hover:bg-secondary hover:text-white">Skills</a>
+            <a href="#projects" class="block px-4 py-2 hover:bg-secondary hover:text-white">Projects</a>
+            <a href="#education" class="block px-4 py-2 hover:bg-secondary hover:text-white">Education</a>
+            <a href="#contact" class="block px-4 py-2 hover:bg-secondary hover:text-white">Contact</a>
+        </nav>
     </header>
-    <section id="hero" class="py-16 bg-secondary">
+    <section id="hero" class="py-16 bg-primary text-white">
         <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-heading text-background mb-4">Welcome to My Data Science Portfolio</h2>
-            <p class="text-background">Explore my journey into the world of data science.</p>
+            <h2 class="text-4xl mb-4">Welcome to My Data Science Portfolio</h2>
+            <p class="text-lg">Explore my projects, skills, and educational background.</p>
         </div>
     </section>
     <section id="about" class="py-16">
         <div class="container mx-auto">
-            <h2 class="text-3xl font-heading mb-4">About Me</h2>
+            <h2 class="text-3xl mb-8">About Me</h2>
             <div class="flex flex-col md:flex-row">
-                <img src="assets/profile.jpg" alt="Profile Picture" class="w-full md:w-1/3 rounded-lg mb-4 md:mb-0">
+                <img src="assets/profile.jpg" alt="Profile Picture" class="w-full md:w-1/3 rounded-lg mb-8 md:mb-0">
                 <div class="md:w-2/3 pl-0 md:pl-8">
-                    <p class="mb-4">Hello! I'm a passionate data science student dedicated to exploring the vast potential of data-driven solutions. With a strong foundation in statistics, machine learning, and programming, I aim to leverage data to solve complex problems and drive meaningful insights.</p>
-                    <p>My interests lie in predictive analytics, natural language processing, and deep learning. I enjoy working on projects that involve real-world datasets and collaborating with others to create impactful solutions.</p>
+                    <p class="mb-4">Hello! I'm a passionate data science student dedicated to leveraging data to drive insights and solutions. With a strong foundation in statistics, machine learning, and programming, I'm excited to apply my skills to real-world problems.</p>
+                    <p>My goal is to become a skilled data scientist who can contribute meaningful analysis and predictions to organizations. I'm always eager to learn and grow, whether through coursework, projects, or collaboration with others.</p>
                 </div>
             </div>
         </div>
     </section>
-    <section id="skills" class="py-16 bg-secondary">
+    <section id="skills" class="py-16 bg-secondary text-white">
         <div class="container mx-auto">
-            <h2 class="text-3xl font-heading text-background mb-4">Skills</h2>
-            <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <li class="bg-background p-4 rounded-lg">
-                    <h3 class="text-xl font-heading mb-2">Python</h3>
-                    <p>Proficient in using Python for data analysis, machine learning, and web development.</p>
+            <h2 class="text-3xl mb-8">Skills</h2>
+            <ul class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <li class="bg-primary p-8 rounded-lg">
+                    <h3 class="text-xl mb-4">Programming Languages</h3>
+                    <p>Python, R, SQL</p>
                 </li>
-                <li class="bg-background p-4 rounded-lg">
-                    <h3 class="text-xl font-heading mb-2">R</h3>
-                    <p>Skilled in statistical computing and graphics using R.</p>
+                <li class="bg-primary p-8 rounded-lg">
+                    <h3 class="text-xl mb-4">Tools & Technologies</h3>
+                    <p>Pandas, NumPy, Scikit-learn, TensorFlow, Jupyter Notebook</p>
                 </li>
-                <li class="bg-background p-4 rounded-lg">
-                    <h3 class="text-xl font-heading mb-2">SQL</h3>
-                    <p>Expertise in querying and managing relational databases.</p>
-                </li>
-                <li class="bg-background p-4 rounded-lg">
-                    <h3 class="text-xl font-heading mb-2">Machine Learning</h3>
-                    <p>Experience with supervised and unsupervised learning algorithms.</p>
-                </li>
-                <li class="bg-background p-4 rounded-lg">
-                    <h3 class="text-xl font-heading mb-2">Data Visualization</h3>
-                    <p>Creating insightful visualizations using tools like Matplotlib and Seaborn.</p>
-                </li>
-                <li class="bg-background p-4 rounded-lg">
-                    <h3 class="text-xl font-heading mb-2">Deep Learning</h3>
-                    <p>Building neural networks and deep learning models using TensorFlow and PyTorch.</p>
+                <li class="bg-primary p-8 rounded-lg">
+                    <h3 class="text-xl mb-4">Soft Skills</h3>
+                    <p>Problem-solving, critical thinking, communication</p>
                 </li>
             </ul>
         </div>
     </section>
     <section id="projects" class="py-16">
         <div class="container mx-auto">
-            <h2 class="text-3xl font-heading mb-4">Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-background p-4 rounded-lg">
+            <h2 class="text-3xl mb-8">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-secondary p-8 rounded-lg">
                     <img src="assets/project1.png" alt="Project 1" class="w-full mb-4 rounded-lg">
-                    <h3 class="text-xl font-heading mb-2">Predictive Analytics Model</h3>
-                    <p>A predictive model built to forecast sales trends using historical data.</p>
+                    <h3 class="text-xl mb-4">Predictive Analytics</h3>
+                    <p>A predictive analytics project using historical sales data to forecast future trends.</p>
                 </div>
-                <div class="bg-background p-4 rounded-lg">
+                <div class="bg-secondary p-8 rounded-lg">
                     <img src="assets/project2.png" alt="Project 2" class="w-full mb-4 rounded-lg">
-                    <h3 class="text-xl font-heading mb-2">Sentiment Analysis Tool</h3>
-                    <p>A tool that analyzes customer feedback to gauge sentiment and improve service quality.</p>
+                    <h3 class="text-xl mb-4">Sentiment Analysis</h3>
+                    <p>Analyze customer feedback from social media to gauge brand sentiment.</p>
                 </div>
-                <div class="bg-background p-4 rounded-lg">
+                <div class="bg-secondary p-8 rounded-lg">
                     <img src="assets/project3.png" alt="Project 3" class="w-full mb-4 rounded-lg">
-                    <h3 class="text-xl font-heading mb-2">Image Recognition System</h3>
-                    <p>A system capable of recognizing and categorizing images using convolutional neural networks.</p>
+                    <h3 class="text-xl mb-4">Image Recognition</h3>
+                    <p>Develop an image recognition model to classify different types of animals.</p>
                 </div>
             </div>
         </div>
     </section>
-    <section id="education" class="py-16 bg-secondary">
+    <section id="education" class="py-16 bg-primary text-white">
         <div class="container mx-auto">
-            <h2 class="text-3xl font-heading text-background mb-4">Education</h2>
-            <div class="bg-background p-4 rounded-lg mb-4">
-                <h3 class="text-xl font-heading mb-2">Bachelor of Science in Data Science</h3>
-                <p class="mb-2">University of Example</p>
-                <p>Expected Graduation: June 2026</p>
-            </div>
-            <div class="bg-background p-4 rounded-lg">
-                <h3 class="text-xl font-heading mb-2">Relevant Courses</h3>
-                <ul class="list-disc pl-6">
-                    <li>Introduction to Machine Learning</li>
-                    <li>Statistical Methods</li>
-                    <li>Data Structures and Algorithms</li>
-                    <li>Database Systems</li>
-                    <li>Natural Language Processing</li>
-                </ul>
+            <h2 class="text-3xl mb-8">Education</h2>
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/3 pr-0 md:pr-8">
+                    <h3 class="text-xl mb-4">Bachelor of Science in Data Science</h3>
+                    <p>University of Example</p>
+                    <p>Expected Graduation: 2026</p>
+                </div>
+                <div class="md:w-2/3">
+                    <p class="mb-4">During my time at the University of Example, I've gained a solid foundation in data science principles, including data collection, analysis, and visualization. I've also had the opportunity to work on several projects that have allowed me to apply my skills in practical settings.</p>
+                </div>
             </div>
         </div>
     </section>
     <section id="contact" class="py-16">
         <div class="container mx-auto">
-            <h2 class="text-3xl font-heading mb-4">Contact</h2>
+            <h2 class="text-3xl mb-8">Contact</h2>
             <form id="contact-form" class="max-w-md mx-auto">
                 <div class="mb-4">
                     <label for="name" class="block text-sm font-medium">Name</label>
-                    <input type="text" id="name" name="name" class="mt-1 block w-full p-2 border border-gray-300 rounded-lg" required>
+                    <input type="text" id="name" name="name" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
                 </div>
                 <div class="mb-4">
                     <label for="email" class="block text-sm font-medium">Email</label>
-                    <input type="email" id="email" name="email" class="mt-1 block w-full p-2 border border-gray-300 rounded-lg" required>
+                    <input type="email" id="email" name="email" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
                 </div>
                 <div class="mb-4">
                     <label for="message" class="block text-sm font-medium">Message</label>
-                    <textarea id="message" name="message" rows="4" class="mt-1 block w-full p-2 border border-gray-300 rounded-lg" required></textarea>
+                    <textarea id="message" name="message" rows="4" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required></textarea>
                 </div>
-                <button type="submit" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary">Send Message</button>
+                <button type="submit" class="bg-primary text-white px-4 py-2 rounded-md hover:bg-secondary">Send Message</button>
             </form>
         </div>
     </section>
-    <footer class="bg-primary py-4">
-        <div class="container mx-auto text-center text-white">
-            &copy; 2026 Data Science Portfolio
+    <footer class="bg-primary text-white py-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2026 Data Science Portfolio</p>
         </div>
     </footer>
     <script src="js/main.js"></script>
