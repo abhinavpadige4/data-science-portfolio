@@ -1,0 +1,93 @@
+/* Responsive Design Adjustments */
+
+/* Mobile First Styles */
+.hero {
+  padding: 4rem 1rem;
+}
+
+.about, .skills, .projects, .education, .contact {
+  padding: 2rem 1rem;
+}
+
+/* Tablet Styles */
+@media (min-width: 640px) {
+  .hero {
+    padding: 6rem 2rem;
+  }
+
+  .about, .skills, .projects, .education, .contact {
+    padding: 3rem 2rem;
+  }
+
+  .project-item {
+    flex-basis: calc(50% - 1rem);
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  .hero {
+    padding: 8rem 4rem;
+  }
+
+  .about, .skills, .projects, .education, .contact {
+    padding: 4rem 4rem;
+  }
+
+  .project-item {
+    flex-basis: calc(33.33% - 1rem);
+  }
+}
+
+/* Large Desktop Styles */
+@media (min-width: 1280px) {
+  .hero {
+    padding: 10rem 6rem;
+  }
+
+  .about, .skills, .projects, .education, .contact {
+    padding: 5rem 6rem;
+  }
+}
+
+/* Navigation Menu */
+.nav-menu {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-toggle:checked + .nav-menu {
+  display: flex;
+}
+
+.nav-link {
+  margin: 0.5rem 0;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #E5E7EB;
+  border-radius: 0.25rem;
+}
+
+.button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #2563EB;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #1D4ED8;
+}
