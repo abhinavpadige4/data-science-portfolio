@@ -1,51 +1,87 @@
-:root {
-  --primary-color: #0066CC;
-  --secondary-color: #004080;
-  --font-family: 'Inter', sans-serif;
-  --font-size-base: 16px;
-  --spacing-unit: 8px;
-  --border-radius: 4px;
-}
+/* Base CSS for the Portfolio Site */
 
+/* General Styles */
 body {
   margin: 0;
-  font-family: var(--font-family);
-  font-size: var(--font-size-base);
-  line-height: 1.6;
-  color: #333;
-  background-color: #f9f9f9;
+  font-family: 'Inter', sans-serif;
+  color: #1F2937;
+  background-color: #F9FAFB;
 }
 
+a {
+  text-decoration: none;
+  color: #2563EB;
+}
+
+a:hover {
+  color: #10B981;
+}
+
+/* Container Styles */
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 var(--spacing-unit);
+  padding: 0 16px;
 }
 
+/* Header Styles */
+header {
+  background-color: #2563EB;
+  color: white;
+  padding: 24px 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+/* Hero Section Styles */
 .hero {
-  background-color: var(--primary-color);
+  background-image: url('../assets/profile.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
   text-align: center;
-  padding: 4 * var(--spacing-unit) 0;
 }
 
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: var(--spacing-unit);
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 8px;
 }
 
 .hero p {
   font-size: 1.25rem;
-  margin-bottom: 2 * var(--spacing-unit);
 }
 
-.about, .skills, .projects, .contact {
-  padding: 4 * var(--spacing-unit) 0;
+/* About Section Styles */
+.about {
+  padding: 32px 0;
 }
 
-.about h2, .skills h2, .projects h2, .contact h2 {
-  font-size: 2rem;
-  margin-bottom: 2 * var(--spacing-unit);
+.about h2 {
+  font-size: 1.75rem;
+  margin-bottom: 16px;
+}
+
+.about p {
+  line-height: 1.6;
+}
+
+/* Skills Section Styles */
+.skills {
+  padding: 32px 0;
+  background-color: #F3F4F6;
+}
+
+.skills h2 {
+  font-size: 1.75rem;
+  margin-bottom: 16px;
 }
 
 .skills ul {
@@ -54,23 +90,72 @@ body {
 }
 
 .skills li {
-  background-color: #e0e0e0;
-  margin-bottom: var(--spacing-unit);
-  padding: var(--spacing-unit);
-  border-radius: var(--border-radius);
+  background-color: #E5E7EB;
+  margin-bottom: 8px;
+  padding: 12px;
+  border-radius: 4px;
 }
 
-.projects .project {
-  background-color: #fff;
-  margin-bottom: var(--spacing-unit);
-  padding: var(--spacing-unit);
-  border-radius: var(--border-radius);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+/* Projects Section Styles */
+.projects {
+  padding: 32px 0;
 }
 
-.projects .project h3 {
+.projects h2 {
+  font-size: 1.75rem;
+  margin-bottom: 16px;
+}
+
+.project {
+  margin-bottom: 24px;
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.project h3 {
   font-size: 1.5rem;
-  margin-bottom: var(--spacing-unit);
+  margin-top: 16px;
+}
+
+.project p {
+  line-height: 1.6;
+}
+
+/* Education Section Styles */
+.education {
+  padding: 32px 0;
+  background-color: #F3F4F6;
+}
+
+.education h2 {
+  font-size: 1.75rem;
+  margin-bottom: 16px;
+}
+
+.education ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.education li {
+  background-color: #E5E7EB;
+  margin-bottom: 8px;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+/* Contact Section Styles */
+.contact {
+  padding: 32px 0;
+}
+
+.contact h2 {
+  font-size: 1.75rem;
+  margin-bottom: 16px;
 }
 
 .contact form {
@@ -78,34 +163,35 @@ body {
   flex-direction: column;
 }
 
-.contact input, .contact textarea {
-  margin-bottom: var(--spacing-unit);
-  padding: var(--spacing-unit);
-  border: 1px solid #ccc;
-  border-radius: var(--border-radius);
+.contact input,
+.contact textarea {
+  margin-bottom: 16px;
+  padding: 8px;
+  border: 1px solid #D1D5DB;
+  border-radius: 4px;
 }
 
 .contact button {
-  background-color: var(--secondary-color);
+  padding: 12px;
+  background-color: #2563EB;
   color: white;
-  padding: var(--spacing-unit) 2 * var(--spacing-unit);
   border: none;
-  border-radius: var(--border-radius);
+  border-radius: 4px;
   cursor: pointer;
 }
 
 .contact button:hover {
-  background-color: darken(var(--secondary-color), 10%);
+  background-color: #10B981;
 }
 
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-  .hero p {
-    font-size: 1rem;
-  }
-  .about h2, .skills h2, .projects h2, .contact h2 {
-    font-size: 1.5rem;
-  }
+/* Footer Styles */
+footer {
+  background-color: #2563EB;
+  color: white;
+  text-align: center;
+  padding: 16px 0;
+}
+
+footer p {
+  margin: 0;
 }
