@@ -2,7 +2,7 @@
 
 ## Overview
 
-Static-site hosting has matured significantly, with major platforms offering generous free tiers, global CDN delivery, and seamless Git integration. Below is a detailed comparison of the three best free options for deploying a static portfolio site in 2026.
+This document evaluates the three leading free static-site hosting platforms available in 2026, comparing them on ease of deployment, performance, features, and suitability for a data-science student portfolio built with plain HTML, CSS, and Tailwind CDN.
 
 ---
 
@@ -10,41 +10,47 @@ Static-site hosting has matured significantly, with major platforms offering gen
 
 **URL:** https://vercel.com
 
-### Key Features
-- **Global Edge Network:** Vercel operates a CDN with 300+ edge locations worldwide, ensuring sub-100ms latency for most users globally.
-- **Git Integration:** Connect a GitHub, GitLab, or Bitbucket repository and every push to the main branch triggers an automatic deployment. Preview deployments are generated for every pull request.
-- **Zero-Config Framework Support:** Native support for Next.js, Nuxt, SvelteKit, Astro, and plain HTML/CSS/JS projects. For a plain static site, Vercel detects the `index.html` at the root and serves it correctly.
-- **Custom Domains:** Free SSL certificates via Let's Encrypt. Custom domain setup takes under 2 minutes with automatic DNS verification.
-- **Analytics:** Built-in web analytics dashboard showing page views, unique visitors, and geographic distribution — no third-party scripts required.
-- **Serverless Functions:** Free tier includes 100GB of bandwidth and 100,000 function invocations per month, useful if you later add a contact form backend.
+### Why It Ranks #1
 
-### Free Tier Limits (2026)
-| Resource | Limit |
-|---|---|
-| Bandwidth | 100 GB/month |
-| Build Minutes | 6,000 minutes/month |
-| Serverless Function Invocations | 100,000/month |
-| Edge Middleware Requests | 1,000,000/month |
-| Deployments | Unlimited |
-| Team Members | 1 (solo) |
+Vercel is the creator of Next.js and has become the de facto standard for deploying static and serverless sites. Its free tier is generous, its deployment pipeline is seamless, and its global edge network delivers fast load times worldwide.
 
-### Deployment Steps
-1. Push your static site repository to GitHub.
-2. Sign up at vercel.com with your GitHub account.
-3. Click "Add New Project" and select your repository.
-4. Vercel auto-detects the framework. For plain HTML, set the build command to empty and the output directory to `/`.
-5. Click "Deploy" — your site goes live at `your-project.vercel.app` within 30 seconds.
+### Key Features (Free Tier)
 
-### Pros
-- Fastest deployment pipeline (typically under 60 seconds from push to live).
-- Excellent developer experience with instant preview URLs for every branch.
-- Built-in analytics without privacy concerns.
-- Automatic HTTPS and HTTP/2.
+- **Bandwidth:** 100 GB/month
+- **Build Minutes:** 6,000 minutes/month
+- **Global CDN:** 300+ edge locations powered by Fastly
+- **Automatic HTTPS:** TLS certificates issued and renewed automatically
+- **Preview Deployments:** Every pull request gets a unique preview URL
+- **Custom Domains:** Free custom domain support with automatic DNS setup
+- **Serverless Functions:** 100 GB-hours of serverless function execution
+- **Analytics:** Built-in web analytics with no third-party scripts required
 
-### Cons
-- Free tier is limited to solo developers (no team collaboration).
-- Advanced features like edge caching rules require the Pro plan.
-- Less flexible than Netlify for form handling without serverless functions.
+### Deployment Process
+
+1. Push your repository to GitHub, GitLab, or Bitbucket.
+2. Sign up at vercel.com and connect your repository.
+3. Vercel auto-detects the framework (for plain HTML, it serves `index.html` from the root).
+4. Click "Deploy" — your site is live in under 60 seconds.
+5. Every subsequent `git push` to the main branch triggers an automatic redeploy.
+
+### Strengths
+
+- Zero-configuration deployment for static HTML sites.
+- Instant rollbacks — revert to any previous deployment in one click.
+- Edge middleware and edge functions available even on the free tier.
+- Excellent developer experience with a polished dashboard and CLI.
+- Built-in form handling and webhook support.
+- Automatic image optimization via `@vercel/og` and image CDN.
+
+### Limitations
+
+- Free tier is personal-use only; team features require a paid plan.
+- Serverless function execution time capped at 10 seconds on the free tier.
+- No SSH access to the build environment.
+
+### Best For
+
+Developers who want the fastest, most polished deployment experience with minimal configuration. Ideal for portfolios, landing pages, and documentation sites.
 
 ---
 
@@ -52,43 +58,50 @@ Static-site hosting has matured significantly, with major platforms offering gen
 
 **URL:** https://netlify.com
 
-### Key Features
-- **Drag-and-Drop Deploy:** Upload a zip file or drag a folder directly to the Netlify dashboard for instant deployment — no Git required.
-- **Git Integration:** Full CI/CD pipeline with GitHub, GitLab, and Bitbucket. Every branch gets a unique preview URL.
-- **Netlify Forms:** Built-in form handling with spam protection, email notifications, and webhook forwarding — no backend needed. Free tier includes 100 form submissions per month.
-- **Identity & Access:** Built-in authentication system with email, OAuth, and passwordless login options.
-- **Functions:** Serverless functions powered by AWS Lambda, with 125,000 free invocations per month.
-- **Image Optimization:** Automatic image resizing and format conversion (WebP, AVIF) via the Netlify Image CDN.
-- **Branch Deployments:** Every Git branch gets its own live URL, making collaboration and review straightforward.
+### Why It Ranks #2
 
-### Free Tier Limits (2026)
-| Resource | Limit |
-|---|---|
-| Bandwidth | 100 GB/month |
-| Build Minutes | 300 minutes/month |
-| Serverless Function Invocations | 125,000/month |
-| Form Submissions | 100/month |
-| Deployments | Unlimited |
-| Team Members | 1 (solo) |
-| Custom Domains | 1 |
+Netlify is a veteran in static-site hosting with a mature platform, extensive documentation, and a strong community. Its free tier is competitive, and its drag-and-drop deployment option makes it accessible to non-developers.
 
-### Deployment Steps
-1. Push your static site repository to GitHub.
-2. Sign up at netlify.com with your GitHub account.
-3. Click "Add new site" and select your repository.
-4. Set the build command to empty and the publish directory to `/`.
-5. Click "Deploy site" — your site goes live at `your-site.netlify.app`.
+### Key Features (Free Tier)
 
-### Pros
-- Drag-and-drop deployment is the easiest option for beginners.
-- Built-in form handling eliminates the need for third-party services.
-- Image optimization is automatic and requires no configuration.
-- Excellent documentation and community support.
+- **Bandwidth:** 100 GB/month
+- **Build Minutes:** 300 minutes/month
+- **Global CDN:** Powered by Cloudflare with 200+ locations
+- **Automatic HTTPS:** Let's Encrypt certificates with auto-renewal
+- **Preview Deployments:** Unique URLs for every branch and pull request
+- **Custom Domains:** Free custom domain with automatic SSL
+- **Form Handling:** Built-in form submission handling (100 submissions/month free)
+- **Serverless Functions:** 125,000 invocations/month
+- **Identity & Access Management:** Basic authentication features
 
-### Cons
-- Build minutes on the free tier (300) are lower than Vercel's (6,000), which matters for complex builds.
-- Custom domain setup requires manual DNS configuration in some cases.
-- The free tier is limited to one custom domain.
+### Deployment Process
+
+1. Push your repository to GitHub, GitLab, Bitbucket, or Azure DevOps.
+2. Sign up at netlify.com and connect your repository.
+3. Set the build command to empty (no build step needed for plain HTML).
+4. Set the publish directory to `/` (root).
+5. Click "Deploy site" — live in under 90 seconds.
+6. Alternative: drag and drop the entire project folder onto the Netlify dashboard for instant deployment.
+
+### Strengths
+
+- Drag-and-drop deployment for users who prefer not to use Git.
+- Built-in form handling without a backend — perfect for contact forms.
+- Netlify Identity provides simple authentication for protected pages.
+- Extensive plugin ecosystem for integrations (analytics, search, CMS).
+- Netlify Functions support multiple languages (Node.js, Go, Rust, Python).
+- Site backups and rollbacks included on the free tier.
+
+### Limitations
+
+- Build minutes (300/month) are significantly lower than Vercel's free tier.
+- Serverless function invocation limit (125,000/month) is lower than Vercel.
+- Form handling limited to 100 submissions/month on the free tier.
+- Some advanced features (A/B testing, split testing) require paid plans.
+
+### Best For
+
+Users who need built-in form handling, authentication, or prefer a drag-and-drop deployment workflow. Good for portfolios with contact forms and interactive elements.
 
 ---
 
@@ -96,85 +109,117 @@ Static-site hosting has matured significantly, with major platforms offering gen
 
 **URL:** https://pages.github.com
 
-### Key Features
-- **Native GitHub Integration:** Hosting is built directly into GitHub. No third-party account needed — your repository is your hosting platform.
-- **Jekyll Support:** Built-in Jekyll static site generator, though plain HTML works perfectly without it.
-- **Custom Domains:** Support for custom domains with automatic SSL via Let's Encrypt.
-- **GitHub Actions:** Use GitHub Actions workflows to automate builds and deployments directly from your repository.
-- **Unlimited Bandwidth:** No bandwidth cap on the free tier — GitHub Pages serves unlimited traffic.
-- **Repository-Level Hosting:** Each repository can have its own GitHub Pages site, making it easy to manage multiple projects.
+### Why It Ranks #3
 
-### Free Tier Limits (2026)
-| Resource | Limit |
-|---|---|
-| Bandwidth | Unlimited |
-| Storage | 1 GB per repository |
-| Build Minutes | 2,000 minutes/month (GitHub Actions) |
-| Deployments | Unlimited |
-| Team Members | Unlimited (public repos) |
-| Custom Domains | Unlimited |
+GitHub Pages is the most accessible option since it requires no additional account — anyone with a GitHub repository can host a static site. It is free forever with no bandwidth limits, making it ideal for students and hobbyists.
 
-### Deployment Steps
-1. Push your static site repository to GitHub.
+### Key Features (Free Tier)
+
+- **Bandwidth:** Unlimited (fair use policy applies)
+- **Storage:** Unlimited repository storage (subject to GitHub's 1 GB per-repo soft limit)
+- **HTTPS:** Automatic HTTPS via Let's Encrypt
+- **Custom Domains:** Free custom domain support with CNAME records
+- **GitHub Actions Integration:** Can use GitHub Actions for build pipelines
+- **No Build Minutes Limit:** No restriction on build frequency
+- **Repository Integration:** Site is served directly from your repository
+
+### Deployment Process
+
+1. Push your project to a GitHub repository.
 2. Go to repository Settings > Pages.
-3. Under "Build and deployment," select "Deploy from a branch."
-4. Choose the `main` branch and the `/` (root) folder.
-5. Click "Save" — your site goes live at `username.github.io/repo-name` within 1-2 minutes.
+3. Under "Build and deployment," select the branch (main or gh-pages) and folder (/root).
+4. Click "Save" — your site is live at `https://<username>.github.io/<repo-name>` within 1-2 minutes.
+5. For custom domains, add a CNAME file to the repository root and configure DNS.
 
-### Pros
-- Completely free with no bandwidth limits — ideal for high-traffic sites.
-- No separate account or platform required; everything stays within GitHub.
-- Unlimited custom domains and team members on public repositories.
-- GitHub Actions provides a powerful CI/CD pipeline for automated deployments.
-- Best option for open-source projects and academic portfolios.
+### Strengths
 
-### Cons
-- No built-in form handling or serverless functions.
-- Deployment is slower than Vercel or Netlify (1-2 minutes vs. 30 seconds).
-- Limited to GitHub repositories — no support for GitLab or Bitbucket.
-- No built-in analytics or image optimization.
-- Custom domain SSL setup can be finicky and may require manual DNS configuration.
+- Completely free with no bandwidth or storage limits.
+- No separate account needed — works with any existing GitHub account.
+- Direct integration with GitHub Actions for CI/CD pipelines.
+- Source code and site are in the same repository — easy version control.
+- No vendor lock-in — your site is just files in a Git repository.
+- Community support is vast due to GitHub's popularity.
+
+### Limitations
+
+- No built-in form handling — requires a third-party service (Formspree, etc.).
+- No serverless functions or API routes.
+- Custom domain setup requires manual DNS configuration.
+- No preview deployments for pull requests (requires third-party tools).
+- Build times can be slower due to GitHub Actions queue.
+- Limited to static content — no dynamic rendering.
+- Subdomain format (`username.github.io/repo`) is less professional than a custom domain.
+
+### Best For
+
+Students, hobbyists, and developers who want a completely free solution with no bandwidth concerns. Ideal for documentation sites, personal portfolios, and projects where the source code is already on GitHub.
 
 ---
 
 ## Comparison Summary
 
 | Feature | Vercel | Netlify | GitHub Pages |
-|---|---|---|---|
-| **Bandwidth** | 100 GB/month | 100 GB/month | Unlimited |
-| **Build Minutes** | 6,000/month | 300/month | 2,000/month |
-| **Deploy Speed** | ~30 seconds | ~45 seconds | ~1-2 minutes |
-| **Custom Domains** | Yes (free SSL) | Yes (free SSL) | Yes (free SSL) |
-| **Form Handling** | Via serverless functions | Built-in (100/month) | Not available |
-| **Image Optimization** | Via serverless functions | Built-in | Not available |
-| **Analytics** | Built-in | Via Netlify Analytics | Not available |
-| **Git Platforms** | GitHub, GitLab, Bitbucket | GitHub, GitLab, Bitbucket | GitHub only |
-| **Drag-and-Drop** | No | Yes | No |
-| **Serverless Functions** | 100K invocations/month | 125K invocations/month | Not available |
-| **Team Members** | 1 (solo) | 1 (solo) | Unlimited (public) |
+|---------|--------|---------|--------------|
+| Bandwidth | 100 GB/mo | 100 GB/mo | Unlimited |
+| Build Minutes | 6,000/mo | 300/mo | Unlimited |
+| CDN Locations | 300+ | 200+ | GitHub's CDN |
+| Custom Domain | Free | Free | Free |
+| Form Handling | Via functions | Built-in (100/mo) | Third-party |
+| Serverless Functions | Yes | Yes | No |
+| Preview Deploys | Yes | Yes | No |
+| Drag-and-Drop Deploy | No | Yes | No |
+| Analytics | Built-in | Via plugins | Third-party |
+| Setup Time | ~60 sec | ~90 sec | ~2 min |
+| Account Required | Yes | Yes | GitHub only |
 
 ---
 
-## Recommendation for This Portfolio Site
+## Recommendation for This Project
 
 **Vercel** is the recommended hosting platform for this data-science student portfolio for the following reasons:
 
-1. **Fastest deployment:** Sub-60-second deploy times ensure the site is live almost immediately after pushing to GitHub.
-2. **Built-in analytics:** Track visitor engagement without adding third-party scripts that could affect page load performance.
-3. **Edge network:** 300+ global locations ensure fast load times for visitors worldwide.
-4. **Future-proof:** If the portfolio later needs serverless functions (e.g., for a contact form or API integration), Vercel's free tier provides 100,000 invocations per month.
-5. **Simple configuration:** For a plain HTML/CSS/JS static site, Vercel requires zero configuration — just push and deploy.
+1. **Fastest deployment:** Zero-configuration setup for plain HTML sites.
+2. **Best performance:** 300+ edge locations ensure fast load times globally.
+3. **Generous free tier:** 6,000 build minutes and 100 GB bandwidth are more than sufficient for a portfolio.
+4. **Preview deployments:** Useful for testing changes before going live.
+5. **Built-in analytics:** No need for third-party tracking scripts.
+6. **Automatic HTTPS:** No manual certificate management.
+7. **Easy rollback:** Instantly revert to any previous version.
 
-**Runner-up:** Netlify is an excellent alternative if built-in form handling is needed, as its free tier includes 100 form submissions per month without requiring serverless functions.
+### Deployment Steps for This Project
 
-**Best for unlimited bandwidth:** GitHub Pages is the best choice if the site is expected to receive very high traffic, as it has no bandwidth cap. However, it lacks the developer experience features of Vercel and Netlify.
+1. Push the complete project to a GitHub repository.
+2. Sign up at https://vercel.com using GitHub authentication.
+3. Click "Add New" > "Project" and select the repository.
+4. Vercel auto-detects the framework as "Static" — no configuration needed.
+5. Click "Deploy" and wait for the build to complete.
+6. Your site is live at `https://<project-name>.vercel.app`.
+7. Optional: Add a custom domain via Vercel's domain management panel.
 
 ---
 
-## Sources
+## Additional Considerations
 
-- Vercel Pricing: https://vercel.com/pricing
-- Netlify Pricing: https://www.netlify.com/pricing/
-- GitHub Pages Documentation: https://docs.github.com/en/pages
-- Vercel Documentation: https://vercel.com/docs
-- Netlify Documentation: https://docs.netlify.com/
+### Performance
+
+All three platforms use global CDNs, but Vercel's edge network (powered by Fastly) offers the lowest latency for most users. Netlify's Cloudflare-powered CDN is also excellent. GitHub Pages uses GitHub's own CDN infrastructure, which is reliable but may have slightly higher latency in some regions.
+
+### Security
+
+All three platforms provide automatic HTTPS with Let's Encrypt certificates. Vercel and Netlify offer additional security features like bot protection and rate limiting on paid plans. GitHub Pages relies on GitHub's security infrastructure.
+
+### Scalability
+
+For a portfolio site, all three platforms are more than sufficient. However, if the site grows to include heavy traffic or dynamic features, Vercel and Netlify offer easier paths to paid plans with additional capabilities.
+
+### Cost
+
+All three platforms offer free tiers that are more than adequate for a personal portfolio. Paid plans start at $5-20/month depending on the platform and features needed.
+
+---
+
+## Conclusion
+
+For a data-science student portfolio built with plain HTML, CSS, and Tailwind CDN, **Vercel** provides the best combination of ease of use, performance, and features. **Netlify** is a strong alternative if built-in form handling is needed. **GitHub Pages** is the most accessible option for those who want a completely free solution with no bandwidth limits.
+
+All three platforms are excellent choices, and the decision ultimately comes down to personal preference and specific project requirements.
