@@ -4,61 +4,148 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Science Portfolio</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
-<body>
-    <header class="hero">
-        <div class="container">
-            <h1>Welcome to My Data Science Portfolio</h1>
-            <p>Explore my projects and learn more about my journey in data science.</p>
+<body class="bg-background text-text font-body">
+    <header class="bg-primary py-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-white font-heading text-2xl">Data Science Portfolio</h1>
+            <nav class="hidden md:flex space-x-4">
+                <a href="#about" class="text-white hover:text-secondary">About</a>
+                <a href="#skills" class="text-white hover:text-secondary">Skills</a>
+                <a href="#projects" class="text-white hover:text-secondary">Projects</a>
+                <a href="#education" class="text-white hover:text-secondary">Education</a>
+                <a href="#contact" class="text-white hover:text-secondary">Contact</a>
+            </nav>
+            <button id="mobile-menu-toggle" class="md:hidden text-white">☰
+            </button>
+        </div>
+        <div id="mobile-menu" class="md:hidden mt-2">
+            <a href="#about" class="block px-3 py-2 text-white hover:bg-secondary hover:text-background">About</a>
+            <a href="#skills" class="block px-3 py-2 text-white hover:bg-secondary hover:text-background">Skills</a>
+            <a href="#projects" class="block px-3 py-2 text-white hover:bg-secondary hover:text-background">Projects</a>
+            <a href="#education" class="block px-3 py-2 text-white hover:bg-secondary hover:text-background">Education</a>
+            <a href="#contact" class="block px-3 py-2 text-white hover:bg-secondary hover:text-background">Contact</a>
         </div>
     </header>
-    <section id="about" class="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>I am passionate about data science and its applications in solving real-world problems. With a strong foundation in statistics, machine learning, and data analysis, I strive to create meaningful insights from complex datasets.</p>
+    <section id="hero" class="py-16 bg-secondary">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-heading text-background mb-4">Welcome to My Data Science Portfolio</h2>
+            <p class="text-background">Explore my journey into the world of data science.</p>
         </div>
     </section>
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2>Skills</h2>
-            <ul>
-                <li>Python</li>
-                <li>R</li>
-                <li>SQL</li>
-                <li>Machine Learning</li>
-                <li>Data Visualization</li>
+    <section id="about" class="py-16">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-heading mb-4">About Me</h2>
+            <div class="flex flex-col md:flex-row">
+                <img src="assets/profile.jpg" alt="Profile Picture" class="w-full md:w-1/3 rounded-lg mb-4 md:mb-0">
+                <div class="md:w-2/3 pl-0 md:pl-8">
+                    <p class="mb-4">Hello! I'm a passionate data science student dedicated to exploring the vast potential of data-driven solutions. With a strong foundation in statistics, machine learning, and programming, I aim to leverage data to solve complex problems and drive meaningful insights.</p>
+                    <p>My interests lie in predictive analytics, natural language processing, and deep learning. I enjoy working on projects that involve real-world datasets and collaborating with others to create impactful solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="skills" class="py-16 bg-secondary">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-heading text-background mb-4">Skills</h2>
+            <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <li class="bg-background p-4 rounded-lg">
+                    <h3 class="text-xl font-heading mb-2">Python</h3>
+                    <p>Proficient in using Python for data analysis, machine learning, and web development.</p>
+                </li>
+                <li class="bg-background p-4 rounded-lg">
+                    <h3 class="text-xl font-heading mb-2">R</h3>
+                    <p>Skilled in statistical computing and graphics using R.</p>
+                </li>
+                <li class="bg-background p-4 rounded-lg">
+                    <h3 class="text-xl font-heading mb-2">SQL</h3>
+                    <p>Expertise in querying and managing relational databases.</p>
+                </li>
+                <li class="bg-background p-4 rounded-lg">
+                    <h3 class="text-xl font-heading mb-2">Machine Learning</h3>
+                    <p>Experience with supervised and unsupervised learning algorithms.</p>
+                </li>
+                <li class="bg-background p-4 rounded-lg">
+                    <h3 class="text-xl font-heading mb-2">Data Visualization</h3>
+                    <p>Creating insightful visualizations using tools like Matplotlib and Seaborn.</p>
+                </li>
+                <li class="bg-background p-4 rounded-lg">
+                    <h3 class="text-xl font-heading mb-2">Deep Learning</h3>
+                    <p>Building neural networks and deep learning models using TensorFlow and PyTorch.</p>
+                </li>
             </ul>
         </div>
     </section>
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="project">
-                <h3>Customer Segmentation</h3>
-                <p>Used clustering algorithms to segment customers based on purchasing behavior.</p>
-            </div>
-            <div class="project">
-                <h3>Sentiment Analysis</h3>
-                <p>Analyzed social media sentiment using natural language processing techniques.</p>
+    <section id="projects" class="py-16">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-heading mb-4">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-background p-4 rounded-lg">
+                    <img src="assets/project1.png" alt="Project 1" class="w-full mb-4 rounded-lg">
+                    <h3 class="text-xl font-heading mb-2">Predictive Analytics Model</h3>
+                    <p>A predictive model built to forecast sales trends using historical data.</p>
+                </div>
+                <div class="bg-background p-4 rounded-lg">
+                    <img src="assets/project2.png" alt="Project 2" class="w-full mb-4 rounded-lg">
+                    <h3 class="text-xl font-heading mb-2">Sentiment Analysis Tool</h3>
+                    <p>A tool that analyzes customer feedback to gauge sentiment and improve service quality.</p>
+                </div>
+                <div class="bg-background p-4 rounded-lg">
+                    <img src="assets/project3.png" alt="Project 3" class="w-full mb-4 rounded-lg">
+                    <h3 class="text-xl font-heading mb-2">Image Recognition System</h3>
+                    <p>A system capable of recognizing and categorizing images using convolutional neural networks.</p>
+                </div>
             </div>
         </div>
     </section>
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contact</h2>
-            <form id="contact-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Send</button>
+    <section id="education" class="py-16 bg-secondary">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-heading text-background mb-4">Education</h2>
+            <div class="bg-background p-4 rounded-lg mb-4">
+                <h3 class="text-xl font-heading mb-2">Bachelor of Science in Data Science</h3>
+                <p class="mb-2">University of Example</p>
+                <p>Expected Graduation: June 2026</p>
+            </div>
+            <div class="bg-background p-4 rounded-lg">
+                <h3 class="text-xl font-heading mb-2">Relevant Courses</h3>
+                <ul class="list-disc pl-6">
+                    <li>Introduction to Machine Learning</li>
+                    <li>Statistical Methods</li>
+                    <li>Data Structures and Algorithms</li>
+                    <li>Database Systems</li>
+                    <li>Natural Language Processing</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="py-16">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-heading mb-4">Contact</h2>
+            <form id="contact-form" class="max-w-md mx-auto">
+                <div class="mb-4">
+                    <label for="name" class="block text-sm font-medium">Name</label>
+                    <input type="text" id="name" name="name" class="mt-1 block w-full p-2 border border-gray-300 rounded-lg" required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-medium">Email</label>
+                    <input type="email" id="email" name="email" class="mt-1 block w-full p-2 border border-gray-300 rounded-lg" required>
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-sm font-medium">Message</label>
+                    <textarea id="message" name="message" rows="4" class="mt-1 block w-full p-2 border border-gray-300 rounded-lg" required></textarea>
+                </div>
+                <button type="submit" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary">Send Message</button>
             </form>
         </div>
     </section>
-    <script src="./js/script.js"></script>
+    <footer class="bg-primary py-4">
+        <div class="container mx-auto text-center text-white">
+            &copy; 2026 Data Science Portfolio
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
 </body>
 </html>
