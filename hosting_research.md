@@ -1,67 +1,49 @@
-# Top 3 Free Static-Site Hosting Options in 2026
+# Research on Top 3 Free Static-Site Hosting Options for 2026
 
-Static-site hosting has evolved significantly, offering numerous free options that cater to developers and small businesses. Here are the top three free static-site hosting options as of 2026.
+## Introduction
+This document provides an overview of the top three free static-site hosting options available in 2026. The criteria for selection include ease of use, scalability, community support, and additional features.
 
 ## 1. GitHub Pages
+### Overview
+GitHub Pages is a static site hosting service that takes HTML, CSS, and JavaScript files straight from a GitHub repository and publishes them as a website.
 
-**Website:** [GitHub Pages](https://pages.github.com/)
+### Pros
+- **Free**: Host unlimited static sites for free.
+- **Integration with GitHub**: Seamless integration with Git workflows.
+- **Custom Domains**: Ability to use custom domains with CNAME records.
+- **HTTPS Support**: Automatically provided by GitHub.
 
-**Features:**
-- **Free Hosting:** Host unlimited static sites for free.
-- **Git Integration:** Seamlessly integrates with GitHub repositories.
-- **Custom Domains:** Supports custom domains with CNAME records.
-- **SSL Certificates:** Automatically provides HTTPS for GitHub subdomains.
-- **Jekyll Support:** Built-in support for Jekyll, a popular static site generator.
-
-**Pros:**
-- Easy to set up and manage.
-- Great for personal and small projects.
-- Strong community support.
-
-**Cons:**
-- Limited customization options compared to other platforms.
-- Performance might not be optimal for high-traffic sites.
+### Cons
+- **Limited Customization**: Some advanced configurations require additional tools.
+- **Build Process**: While not required for simple sites, more complex sites may need a build process.
 
 ## 2. Netlify
+### Overview
+Netlify is a continuous deployment platform that supports static websites and web apps. It integrates with Git repositories to automatically deploy changes.
 
-**Website:** [Netlify](https://www.netlify.com/)
+### Pros
+- **Free Tier**: Offers generous free tier with 100GB bandwidth and 1,000 GB storage.
+- **Continuous Deployment**: Automatically deploys changes from connected Git repositories.
+- **Plugins and Add-ons**: Extensive ecosystem of plugins and add-ons for additional functionality.
+- **Global CDN**: Fast global content delivery network.
 
-**Features:**
-- **Free Hosting:** Offers generous free tier with 100 GB bandwidth and 1000 GB storage.
-- **Continuous Deployment:** Automatically deploys changes from connected Git repositories.
-- **Form Handling:** Built-in form handling without server-side code.
-- **Asset Optimization:** Automatically optimizes images and other assets.
-- **Custom Domains:** Supports custom domains with SSL certificates.
-
-**Pros:**
-- Powerful continuous deployment capabilities.
-- Excellent performance and scalability.
-- User-friendly interface.
-
-**Cons:**
-- Some advanced features require paid plans.
-- Steeper learning curve for beginners.
+### Cons
+- **Build Step**: Requires a build step for more complex sites, which can be managed through Netlify's build settings.
+- **Limited Team Collaboration**: Free tier does not support team collaboration.
 
 ## 3. Vercel
+### Overview
+Vercel is a cloud platform for static sites and serverless functions. It integrates with Git repositories and offers a seamless deployment experience.
 
-**Website:** [Vercel](https://vercel.com/)
+### Pros
+- **Free Tier**: Provides generous free tier with 100GB bandwidth and 1,000 GB storage.
+- **Zero Configuration**: Automatic detection of frameworks and configuration.
+- **Serverless Functions**: Supports serverless functions for dynamic content.
+- **Global CDN**: Fast global content delivery network.
 
-**Features:**
-- **Free Hosting:** Provides free hosting with 100 GB bandwidth and 1000 GB storage.
-- **Global Edge Network:** Delivers fast performance with a global edge network.
-- **Serverless Functions:** Supports serverless functions for dynamic content.
-- **Automatic Optimizations:** Automatically optimizes images, fonts, and other assets.
-- **Custom Domains:** Supports custom domains with SSL certificates.
-
-**Pros:**
-- Exceptional performance and reliability.
-- Easy integration with Git repositories.
-- Comprehensive documentation and support.
-
-**Cons:**
-- Some advanced features require paid plans.
-- Pricing can become expensive for high-traffic sites.
+### Cons
+- **Build Step**: Requires a build step for more complex sites, which can be managed through Vercel's build settings.
+- **Limited Team Collaboration**: Free tier does not support team collaboration.
 
 ## Conclusion
-
-Each of these platforms offers unique advantages, making them suitable for different types of projects. For simplicity and ease of use, GitHub Pages is an excellent choice. For more advanced features and better performance, Netlify and Vercel are superior options. Choose the one that best fits your needs.
+Each of these platforms has its strengths and weaknesses. For simplicity and direct integration with GitHub, GitHub Pages is an excellent choice. For more advanced features and continuous deployment, Netlify and Vercel are superior options. Given the requirement to deploy to Vercel, it stands out as a robust choice for hosting this static portfolio site.
