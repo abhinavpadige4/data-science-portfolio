@@ -1,0 +1,100 @@
+:root {
+    --color-primary: #2563EB;
+    --color-secondary: #10B981;
+    --color-background: #F9FAFB;
+    --color-text: #1F2937;
+    --font-base: 'Inter', system-ui, sans-serif;
+    --spacing-unit: 1rem;
+}
+
+body {
+    font-family: var(--font-base);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.navbar {
+    background-color: var(--color-primary);
+    padding: var(--spacing-unit);
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-unit);
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    display: inline;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s;
+}
+
+.nav-list a:hover {
+    background-color: var(--color-secondary);
+    border-radius: 0.25rem;
+}
+
+.hero {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    color: white;
+    text-align: center;
+    padding: 4 * var(--spacing-unit);
+}
+
+.projects, .skills, .contact {
+    padding: 2 * var(--spacing-unit);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.project-item {
+    margin-bottom: var(--spacing-unit);
+}
+
+.skill-list {
+    list-style-type: disc;
+    padding-left: 2 * var(--spacing-unit);
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact label {
+    margin-top: var(--spacing-unit);
+}
+
+.contact input, .contact textarea {
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+}
+
+.contact button {
+    margin-top: var(--spacing-unit);
+    padding: 0.5rem;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact button:hover {
+    background-color: var(--color-secondary);
+}
