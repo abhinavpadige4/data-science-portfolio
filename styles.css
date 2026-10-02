@@ -43,7 +43,6 @@ body {
 
 .nav-list a:hover {
     background-color: var(--color-secondary);
-    border-radius: 0.25rem;
 }
 
 .hero {
@@ -78,23 +77,30 @@ body {
 }
 
 .contact input, .contact textarea {
-    padding: 0.5rem;
-    margin-top: 0.25rem;
+    padding: var(--spacing-unit);
+    margin-top: 0.5 * var(--spacing-unit);
     border: 1px solid #ccc;
-    border-radius: 0.25rem;
+    border-radius: 0.5 * var(--spacing-unit);
 }
 
 .contact button {
     margin-top: var(--spacing-unit);
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     background-color: var(--color-primary);
     color: white;
     border: none;
-    border-radius: 0.25rem;
+    border-radius: 0.5 * var(--spacing-unit);
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 .contact button:hover {
     background-color: var(--color-secondary);
+}
+
+@media (max-width: 600px) {
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
 }
